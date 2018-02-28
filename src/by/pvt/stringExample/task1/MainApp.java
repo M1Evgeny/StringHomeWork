@@ -25,7 +25,7 @@ public class MainApp {
 		return words;
 	}
 
-	public String changeChar(String word, int offSet, char newChar) {
+	private String changeChar(String word, int offSet, char newChar) {
 		String newWord = word;
 		if (offSet > 0 && offSet <= word.length()) {
 			StringBuilder sb = new StringBuilder(word);
