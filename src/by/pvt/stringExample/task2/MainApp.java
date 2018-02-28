@@ -12,13 +12,13 @@ public class MainApp {
 	private String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 	public void printCharAndNumber(String sentense) {
-		char[] letters = getCharArray(sentense);
+		String newSentense = toLowerCaseS(sentense);
+		char[] letters = getCharArray(newSentense);
 		getCharArrayInfo(letters);
 		getAlphabetNumber(letters);
 	}
 
 	private char[] getCharArray(String sentense) {
-		sentense = sentense.toLowerCase();
 		char[] words = sentense.toCharArray();
 		return words;
 	}
@@ -44,5 +44,9 @@ public class MainApp {
 				System.out.print(i + "  ");
 			}
 		}
+	}
+
+	private String toLowerCaseS(String sentense) {
+		return sentense.toLowerCase();
 	}
 }

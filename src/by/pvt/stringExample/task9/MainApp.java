@@ -9,6 +9,13 @@ public class MainApp {
 		ma.counter(sentense);
 	}
 
+	public void counter(String sentense) {
+		String newSentense = replaseMarks(sentense);
+		newSentense = toLowerCaseS(newSentense);
+		String[] words = splitSentense(newSentense);
+		countWordsFrequency(words);
+	}
+
 	private String[] splitSentense(String sentense) {
 		String[] words = sentense.split(" ");
 		return words;
@@ -36,9 +43,7 @@ public class MainApp {
 		}
 	}
 
-	public void counter(String sentense) {
-		String newSentense = replaseMarks(sentense);
-		String[] words = splitSentense(newSentense);
-		countWordsFrequency(words);
+	private String toLowerCaseS(String sentense) {
+		return sentense.toLowerCase();
 	}
 }
